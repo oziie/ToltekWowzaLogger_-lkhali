@@ -20,7 +20,7 @@ Java kodunun çalışması için MongoDB kütüphanesini projemize import etmeli
 
 https://oss.sonatype.org/content/repositories/releases/org/mongodb/mongo-java-driver/3.5.0/mongo-java-driver-3.5.0.jar
 
-NOT:Bu jar dosyasını Ayrıca Wowza'nın kurulu olduğu klasörün (default olarak "Program Files" içerisinde "Wowza Media Systems") içerisindeki "lib" klasörüne atmanız gerekmektedir.
+NOT:Bu jar dosyasını Ayrıca Wowza'nın kurulu olduğu klasörün (default olarak "Program Files" içerisinde "Wowza Media Systems") içerisindeki "lib" klasörüne atmanız gerekmektedir.Ayrıca Eclipse üzerindeki projeye de eklemeniz gerekmektedir.
 
 NOT:"Modules" kısmını görebilmek için "Server-Users" kısmında "Admin" kullanıcısının yetkilerini açmalısınız.Bunu için "Actions" kısmında
 "Preferences" altında "Allow access to advanced properties and features" check box'ı seçilip kaydedilmelidir.Bundan sonra "Access Level" 'de  "Admin(Advanced)" olarak görülmelidir.
