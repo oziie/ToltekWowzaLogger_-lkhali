@@ -23,22 +23,27 @@ public class ToltekWowzaLogger extends ModuleBase {
 	
 	public void onAppStart(IApplicationInstance appInstance) throws InvocationTargetException 
 	{
-		getLogger().info(" Uygulama Basladi!!!");
-		//Burada nesne olu�tur.
+		//Wowza Streaming Engine Manager'a log aktaran bir methodtur.
+		//Çıktısı Server-Logs kısmında debug loglarında görülebilir.
 		
+		getLogger().info(" Uygulama Basladi!!!");
+		
+		//ToltekObject nesnesi oluşturuluyor ve appInstance parametre veriliyor.
 		ToltekObject Log=new ToltekObject(appInstance);
 		
-		try {
+		
+		//Exception kontrolü
+		try
+		{
 			ToltekMongoLogger.LogaEkle(Log);
-			
-				
-		}catch(InvocationTargetException ie)
+		}
+		catch(InvocationTargetException ie)	
 		{
 			ie.getCause().toString();
 		}
 		
 		
-		getLogger().info("MongoDB aktar�ld�!!!");
+		getLogger().info("MongoDB aktarýldý!!!");
 	
 	}
 
@@ -47,21 +52,22 @@ public class ToltekWowzaLogger extends ModuleBase {
 		
 		
 		getLogger().info(" Uygulama Bitti!!!");
-		//Burada nesne olu�tur.
 		
 		ToltekObject Log=new ToltekObject(appInstance);
 		
-		try {
+		
+		try 
+		{
 			ToltekMongoLogger.LogaEkle(Log);
-			
-				
-		}catch(InvocationTargetException ie)
+					
+		}
+		catch(InvocationTargetException ie)
 		{
 			ie.getCause().toString();
 		}
 		
 		
-		getLogger().info("MongoDB aktar�ld�!!!");
+		getLogger().info("MongoDB aktarýldý!!!");
 		
 		
 		
@@ -75,20 +81,19 @@ public class ToltekWowzaLogger extends ModuleBase {
 		ToltekObject Log=new ToltekObject(stream);
 		
 		
-		try {
-			ToltekMongoLogger.LogaEkle(Log);
-			
-				
-		}catch(InvocationTargetException ie)
+		try 
+		{
+			ToltekMongoLogger.LogaEkle(Log);	
+		}
+		catch(InvocationTargetException ie)
 		{
 			ie.getCause().toString();
 		}
 		
 		
-		getLogger().info("MongoDB aktar�ld�!!!");
+		getLogger().info("MongoDB aktarýldý!!!");
 		
 	}
 	
-
 	
 }
